@@ -1,1 +1,2 @@
-- Type "http://localhost:(PORT No)/Ahsan/MainView" to run application. 
+-Run Server and Application from Visual Studio.
+-Type "http://localhost:(PORT#)/Ahsan/MainView" in Chrome to run application. 
