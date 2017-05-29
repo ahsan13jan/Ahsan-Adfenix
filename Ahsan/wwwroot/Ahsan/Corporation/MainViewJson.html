@@ -1,0 +1,28 @@
+﻿<link rel="import" href="/sys/polymer/polymer.html">
+
+<style>
+    .inputMain {
+        height: 25px;
+        width: 150px;
+    }
+
+    .bold {
+        font-weight: bold;
+    }
+</style>
+
+<template>
+    <template is="dom-bind">
+        <h4 class="bold" style="margin-left:10px">Welcome</h4>
+        <h6 class="bold" style="margin-left:10px">Create Main Corporation</h6>
+        <label style="margin-left:10px">Name</label>
+        <input class="inputMain" value="{{model.CoporationNameToAdd$::input}}">
+        <br />
+        <button style="margin-top:5px;margin-left:53px" value="{{model.CreateCorporation$::click}}" onmousedown="++this.value">Create Corporation</button>
+        <h6 class="bold" style="margin-left:10px">List of Corporations</h6>
+        <template style="margin:5px" is="dom-repeat" items="{{model.CorporationList}}">
+            <starcounter-include partial="{{item}}"></starcounter-include>
+        </template>
+
+    </template>
+</template>

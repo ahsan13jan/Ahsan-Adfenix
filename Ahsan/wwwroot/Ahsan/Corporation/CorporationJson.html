@@ -1,0 +1,65 @@
+﻿<link rel="import" href="/sys/polymer/polymer.html">
+<style>
+    .sortbutton {
+        margin-top: 5px;
+    }
+
+    .sortLabel {
+        width: 200px;
+    }
+
+    .containerBorder {
+        margin: 10px;
+        padding: 5px;
+        border-style: solid;
+        border-width: 1px;
+        border-radius: 5px;
+    }
+
+    .input {
+        margin: 5px;
+        height: 25px;
+        width: 150px;
+    }
+
+    .bold {
+        font-weight: bold;
+    }
+</style>
+<template>
+    <template is="dom-bind">
+        <div class="containerBorder">
+
+            <h5 class="bold">{{model.Name}}</h5>
+            <h6>Franchaise Offices</h6>
+
+            <label>Name</label>
+            <input class="input" value="{{model.FranchiseNameToAdd$::input}}">
+            <br />
+            <button style="margin-top:5px;margin-left:43px" value="{{model.AddFranchise$::click}}" onmousedown="++this.value">Add Franchise</button>
+
+            <br />
+            <label class="bold">Sort On</label>
+            <button class="sortbutton" style="margin-left:155px" value="{{model.SortOnNumberOfHomes$::click}}" onmousedown="++this.value">Number Of Homes</button>
+            <button class="sortbutton" style="margin-left:75px" value="{{model.SortOnTotalComission$::click}}" onmousedown="++this.value">Total Comission</button>
+            <button class="sortbutton" style="margin-left:88px" value="{{model.SortOnAverageComission$::click}}" onmousedown="++this.value">Average Comission</button>
+            <button class="sortbutton" style="margin-left:70px" value="{{model.SortOnTrend$::click}}" onmousedown="++this.value">Trend</button>
+
+            <br />
+
+            <label class="sortLabel bold">Name</label>
+            <label class="sortLabel bold">Number Of Homes Sold</label>
+            <label class="sortLabel bold">Total Commission</label>
+            <label class="sortLabel bold">AverageCommision </label>
+            <label class="sortLabel bold">Trend</label>
+
+            <br />
+
+
+            <template style="margin-top:5px;margin-left:10px" is="dom-repeat" items="{{model.FranchiseList}}">
+                <starcounter-include partial="{{item}}"></starcounter-include>
+            </template>
+
+        </div>
+    </template>
+</template>

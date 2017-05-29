@@ -1,0 +1,135 @@
+﻿<link rel="import" href="/sys/polymer/polymer.html">
+
+<style>
+    .labelDetail {
+        width: 200px;
+    }
+
+    div {
+        margin: 2px;
+    }
+
+    .inputDetail {
+        height: 25px;
+        width: 150px;
+    }
+
+    .bold {
+        font-weight: bold;
+    }
+</style>
+
+
+<template>
+    <template is="dom-bind">
+
+        <a href="/Ahsan/MainView">Back To Start</a>
+        <h4>Settings : {{model.franchise.Name$}} </h4>
+        <h5>Edit Franchise Settings</h5>
+        <div>
+            <label class="labelDetail">Name</label>
+            <input class="inputDetail" class="inputDetail" value="{{model.franchise.Name$::input}}" /> <br />
+        </div>
+
+        <div>
+            <label class="labelDetail">Street</label>
+            <input class="inputDetail" value="{{model.franchise.Street$::input}}" />
+        </div>
+
+        <div>
+            <label class="labelDetail">Number</label>
+            <input class="inputDetail" value="{{model.franchise.Number$::input}}" />
+        </div>
+
+        <div>
+            <label class="labelDetail">Zip Code</label>
+            <input class="inputDetail" value="{{model.franchise.ZipCode$::input}}" />
+        </div>
+
+        <div>
+            <label class="labelDetail">City</label>
+            <input class="inputDetail" value="{{model.franchise.City$::input}}" />
+        </div>
+
+        <div>
+            <label class="labelDetail">Country</label>
+            <input class="inputDetail" value="{{model.franchise.Country$::input}}" />
+        </div>
+
+        <div>
+            <label class="labelDetail">Address </label>
+            <strong>{{model.franchise.Address::input}}</strong>
+        </div>
+
+        <button value="{{model.SaveFranchise$::click}}" onmousedown="++this.value">Save </button>
+
+
+        <h5>Register new Home of Sale</h5>
+        <h6 class="bold">Home info</h6>
+
+        <div>
+            <label class="labelDetail">Street</label>
+            <input class="inputDetail" value="{{model.transaction.Street$::input}}" />
+        </div>
+
+        <div>
+            <label class="labelDetail">Number</label>
+            <input class="inputDetail" value="{{model.transaction.Number$::input}}" />
+        </div>
+
+        <div>
+            <label class="labelDetail">Zip Code</label>
+            <input class="inputDetail" value="{{model.transaction.ZipCode$::input}}" />
+        </div>
+
+        <div>
+            <label class="labelDetail">City</label>
+            <input class="inputDetail" value="{{model.transaction.City$::input}}" />
+        </div>
+
+        <div>
+            <label class="labelDetail">Country</label>
+            <input class="inputDetail" value="{{model.transaction.Country$::input}}" />
+        </div>
+
+        <div>
+            <label class="labelDetail">Address </label>
+            <strong>{{model.transaction.Address::input}} </strong>
+        </div>
+
+        <div>
+            <h6 class="bold">Transaction Info</h6>
+        </div>
+
+        <div>
+            <label class="labelDetail">Date Format ("2016-04-01")</label>
+            <input class="inputDetail" value="{{model.transaction.Date$::input}}" />
+        </div>
+
+        <div>
+            <label class="labelDetail">Sales Price</label>
+            <input class="inputDetail" value="{{model.transaction.SalesPrice$::input}}" />
+        </div>
+
+        <div>
+            <label class="labelDetail">Commission</label>
+            <input class="inputDetail" value="{{model.transaction.Commission$::input}}" />
+        </div>
+
+        <button value="{{model.SaveTransaction$::click}}" onmousedown="++this.value">Register</button>
+
+
+        <h5>List of Transaction</h5>
+
+        <label class="bold labelDetail">Date</label>
+        <label class="bold labelDetail">Sales Price</label>
+        <label class="bold labelDetail">Commission</label>
+        <label class="bold labelDetail">Address</label>
+
+
+        <template style="margin-top:5px;margin-left:10px" is="dom-repeat" items="{{model.TransactionList}}">
+            <starcounter-include partial="{{item}}"></starcounter-include>
+        </template>
+
+    </template>
+</template>

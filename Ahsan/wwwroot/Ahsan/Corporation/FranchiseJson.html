@@ -1,0 +1,23 @@
+﻿<link rel="import" href="/sys/polymer/polymer.html">
+
+<style>
+    .propertyStyle {
+        width: 200px;
+    }
+
+    .a {
+        display: inline-block;
+        width: 200px;
+    }
+</style>
+
+
+<template>
+    <template is="dom-bind">
+        <a class="a" href="/FranchiseDetail/{{model.ObjectId}}">{{model.Name}}</a>
+        <label class="propertyStyle">{{model.NumberOfHomesSold}}</label>
+        <label class="propertyStyle">{{model.TotalCommission}}</label>
+        <label class="propertyStyle" ">{{model.AverageCommision}}</label>
+        <label class="propertyStyle">{{model.Trend}}</label>
+    </template>
+</template>

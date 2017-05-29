@@ -1,0 +1,22 @@
+﻿<link rel="import" href="/sys/polymer/polymer.html">
+
+<style>
+    .propertyStyle {
+        width: 200px;
+    }
+
+    .a {
+        display: inline-block;
+        width: 200px;
+    }
+</style>
+
+
+<template>
+    <template is="dom-bind">
+        <label class="propertyStyle a">{{model.Date}}</label>
+        <label class="propertyStyle">{{model.SalesPrice}}</label>
+        <label class="propertyStyle">{{model.Commission}}</label>
+        <label class="propertyStyle">{{model.Address}}</label>
+    </template>
+</template>

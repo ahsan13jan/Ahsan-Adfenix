@@ -1,0 +1,28 @@
+{
+  "Html": "/Ahsan/FranchiseDetail/FranchiseDetailJson.html",
+  "franchise": {
+    "City$": "",
+    "Country$": "",
+    "Name$": "",
+    "Number$": "",
+    "Street$": "",
+    "ZipCode$": "",
+    "Address": ""
+  },
+
+  "transaction": {
+    "City$": "",
+    "Country$": "",
+    "Name$": "",
+    "Number$": "",
+    "Street$": "",
+    "ZipCode$": "",
+    "Date$": "",
+    "SalesPrice$": 0,
+    "Commission$": 0,
+    "Address": ""
+  },
+  "TransactionList": [{}] ,
+  "SaveFranchise$": 0,
+  "SaveTransaction$": 0
+}
